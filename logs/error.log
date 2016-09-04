@@ -1,1 +1,87 @@
 [Sat Sep 03 18:29:58.639829 2016] [wsgi:error] [pid 23344] Not Found: /favicon.ico
+[Sat Sep 03 19:55:56.880565 2016] [wsgi:error] [pid 24276] Not Found: /blog
+[Sat Sep 03 19:56:30.306409 2016] [wsgi:error] [pid 24276] Not Found: /blogd
+[Sat Sep 03 19:56:33.819169 2016] [wsgi:error] [pid 24276] Not Found: /blogs
+[Sat Sep 03 19:57:21.628862 2016] [wsgi:error] [pid 24276] Not Found: /post_list
+[Sat Sep 03 20:07:44.842484 2016] [wsgi:error] [pid 24276] Internal Server Error: /
+[Sat Sep 03 20:07:44.842520 2016] [wsgi:error] [pid 24276] Traceback (most recent call last):
+[Sat Sep 03 20:07:44.842523 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Sat Sep 03 20:07:44.842526 2016] [wsgi:error] [pid 24276]     response = get_response(request)
+[Sat Sep 03 20:07:44.842528 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+[Sat Sep 03 20:07:44.842531 2016] [wsgi:error] [pid 24276]     response = self.process_exception_by_middleware(e, request)
+[Sat Sep 03 20:07:44.842533 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+[Sat Sep 03 20:07:44.842536 2016] [wsgi:error] [pid 24276]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sat Sep 03 20:07:44.842538 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/blog/views.py", line 10, in post_list
+[Sat Sep 03 20:07:44.842540 2016] [wsgi:error] [pid 24276]     return render(request, 'blog/post_list.html', {'posts': posts})
+[Sat Sep 03 20:07:44.842542 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 30, in render
+[Sat Sep 03 20:07:44.842544 2016] [wsgi:error] [pid 24276]     content = loader.render_to_string(template_name, context, request, using=using)
+[Sat Sep 03 20:07:44.842546 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loader.py", line 67, in render_to_string
+[Sat Sep 03 20:07:44.842548 2016] [wsgi:error] [pid 24276]     template = get_template(template_name, using=using)
+[Sat Sep 03 20:07:44.842550 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loader.py", line 21, in get_template
+[Sat Sep 03 20:07:44.842552 2016] [wsgi:error] [pid 24276]     return engine.get_template(template_name)
+[Sat Sep 03 20:07:44.842554 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 39, in get_template
+[Sat Sep 03 20:07:44.842556 2016] [wsgi:error] [pid 24276]     return Template(self.engine.get_template(template_name), self)
+[Sat Sep 03 20:07:44.842558 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/engine.py", line 160, in get_template
+[Sat Sep 03 20:07:44.842560 2016] [wsgi:error] [pid 24276]     template, origin = self.find_template(template_name)
+[Sat Sep 03 20:07:44.842562 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/engine.py", line 134, in find_template
+[Sat Sep 03 20:07:44.842564 2016] [wsgi:error] [pid 24276]     name, template_dirs=dirs, skip=skip,
+[Sat Sep 03 20:07:44.842566 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 44, in get_template
+[Sat Sep 03 20:07:44.842568 2016] [wsgi:error] [pid 24276]     contents, origin, origin.template_name, self.engine,
+[Sat Sep 03 20:07:44.842569 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 191, in __init__
+[Sat Sep 03 20:07:44.842571 2016] [wsgi:error] [pid 24276]     self.nodelist = self.compile_nodelist()
+[Sat Sep 03 20:07:44.842573 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 233, in compile_nodelist
+[Sat Sep 03 20:07:44.842584 2016] [wsgi:error] [pid 24276]     return parser.parse()
+[Sat Sep 03 20:07:44.842586 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 512, in parse
+[Sat Sep 03 20:07:44.842588 2016] [wsgi:error] [pid 24276]     self.invalid_block_tag(token, command, parse_until)
+[Sat Sep 03 20:07:44.842590 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 574, in invalid_block_tag
+[Sat Sep 03 20:07:44.842591 2016] [wsgi:error] [pid 24276]     "or load this tag?" % (token.lineno, command)
+[Sat Sep 03 20:07:44.842593 2016] [wsgi:error] [pid 24276] TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+[Sat Sep 03 20:29:01.038355 2016] [wsgi:error] [pid 24276] Internal Server Error: /
+[Sat Sep 03 20:29:01.038414 2016] [wsgi:error] [pid 24276] Traceback (most recent call last):
+[Sat Sep 03 20:29:01.038419 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Sat Sep 03 20:29:01.038423 2016] [wsgi:error] [pid 24276]     response = get_response(request)
+[Sat Sep 03 20:29:01.038427 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+[Sat Sep 03 20:29:01.038430 2016] [wsgi:error] [pid 24276]     response = self.process_exception_by_middleware(e, request)
+[Sat Sep 03 20:29:01.038433 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+[Sat Sep 03 20:29:01.038437 2016] [wsgi:error] [pid 24276]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sat Sep 03 20:29:01.038440 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/blog/views.py", line 10, in post_list
+[Sat Sep 03 20:29:01.038443 2016] [wsgi:error] [pid 24276]     return render(request, 'blog/post_list.html', {'posts': posts})
+[Sat Sep 03 20:29:01.038447 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 30, in render
+[Sat Sep 03 20:29:01.038450 2016] [wsgi:error] [pid 24276]     content = loader.render_to_string(template_name, context, request, using=using)
+[Sat Sep 03 20:29:01.038454 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loader.py", line 68, in render_to_string
+[Sat Sep 03 20:29:01.038457 2016] [wsgi:error] [pid 24276]     return template.render(context, request)
+[Sat Sep 03 20:29:01.038460 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 66, in render
+[Sat Sep 03 20:29:01.038464 2016] [wsgi:error] [pid 24276]     return self.template.render(context)
+[Sat Sep 03 20:29:01.038467 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 208, in render
+[Sat Sep 03 20:29:01.038471 2016] [wsgi:error] [pid 24276]     return self._render(context)
+[Sat Sep 03 20:29:01.038474 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+[Sat Sep 03 20:29:01.038477 2016] [wsgi:error] [pid 24276]     return self.nodelist.render(context)
+[Sat Sep 03 20:29:01.038480 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+[Sat Sep 03 20:29:01.038483 2016] [wsgi:error] [pid 24276]     bit = node.render_annotated(context)
+[Sat Sep 03 20:29:01.038485 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+[Sat Sep 03 20:29:01.038497 2016] [wsgi:error] [pid 24276]     return self.render(context)
+[Sat Sep 03 20:29:01.038500 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 174, in render
+[Sat Sep 03 20:29:01.038503 2016] [wsgi:error] [pid 24276]     return compiled_parent._render(context)
+[Sat Sep 03 20:29:01.038505 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+[Sat Sep 03 20:29:01.038508 2016] [wsgi:error] [pid 24276]     return self.nodelist.render(context)
+[Sat Sep 03 20:29:01.038511 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+[Sat Sep 03 20:29:01.038513 2016] [wsgi:error] [pid 24276]     bit = node.render_annotated(context)
+[Sat Sep 03 20:29:01.038516 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+[Sat Sep 03 20:29:01.038519 2016] [wsgi:error] [pid 24276]     return self.render(context)
+[Sat Sep 03 20:29:01.038522 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 70, in render
+[Sat Sep 03 20:29:01.038525 2016] [wsgi:error] [pid 24276]     result = block.nodelist.render(context)
+[Sat Sep 03 20:29:01.038527 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+[Sat Sep 03 20:29:01.038530 2016] [wsgi:error] [pid 24276]     bit = node.render_annotated(context)
+[Sat Sep 03 20:29:01.038532 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+[Sat Sep 03 20:29:01.038535 2016] [wsgi:error] [pid 24276]     return self.render(context)
+[Sat Sep 03 20:29:01.038538 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+[Sat Sep 03 20:29:01.038541 2016] [wsgi:error] [pid 24276]     nodelist.append(node.render_annotated(context))
+[Sat Sep 03 20:29:01.038543 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+[Sat Sep 03 20:29:01.038546 2016] [wsgi:error] [pid 24276]     return self.render(context)
+[Sat Sep 03 20:29:01.038547 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 439, in render
+[Sat Sep 03 20:29:01.038549 2016] [wsgi:error] [pid 24276]     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+[Sat Sep 03 20:29:01.038551 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/urls/base.py", line 91, in reverse
+[Sat Sep 03 20:29:01.038553 2016] [wsgi:error] [pid 24276]     return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+[Sat Sep 03 20:29:01.038554 2016] [wsgi:error] [pid 24276]   File "/home/vhosts/d.getip.org/myenv/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+[Sat Sep 03 20:29:01.038556 2016] [wsgi:error] [pid 24276]     (lookup_view_s, args, kwargs, len(patterns), patterns)
+[Sat Sep 03 20:29:01.038558 2016] [wsgi:error] [pid 24276] NoReverseMatch: Reverse for 'post_detail' with arguments '()' and keyword arguments '{u'pk': 3}' not found. 0 pattern(s) tried: []
