@@ -2,4 +2,3 @@
 __pycache__
 myenv
 .DS_Store
-logs/*
